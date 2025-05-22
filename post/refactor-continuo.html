@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de tu Nuevo Artículo - Decoding Alex</title>
+    <title>Refactor Continuo: Tu Código No es el Código de Hammurabi - Decoding Alex</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -13,49 +13,46 @@
     <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-<header>
-    <h1>decoding alex</h1>
-</header>
+    <header>
+        <h1>Decoding Alex</h1>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="../index.html#inicio">Inicio</a></li>
-        <li><a href="../index.html#articulos">Artículos</a></li>
-        <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
-        <li><a href="../index.html#contacto">Contacto</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="../index.html#inicio">Inicio</a></li>
+            <li><a href="../index.html#articulos">Artículos</a></li>
+            <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
-    <article class="blog-post full-post">
-        <h2>Refactor continuo</h2>
-        <p class="meta">Publicado el 4 de abril de 2023</p>
-        <p>Hay personas que cuando escuchan la
-            palabra “refactor” entienden: “arreglar algo que hicimos mal” y acto seguido se preguntan
-            ¿Cuánto me va a costar?. Esto sucede porque muchas veces asocian el desarrollo de software con algo estático
-            como si se tratara del mismísimo <em>código de Hammurabi </em>escrito en piedra<em> </em>o simplemente porque
-            “si funciona no lo toques”. Tenemos que entender que el software no es algo estático que una vez escrito solo debe
-            modificarse por necesidades del producto, sino que es dinámico y debe adaptarse constantemente. </p>
-        <p>Recientemente tuve que trabajar sobre un código que se
-            había mantenido estático a pesar de que no funcionaba correctamente. Este código tenía una cantidad absurda
-            de test unitarios que validaban hasta el constructor de las clases, pero al rascar un poco la superficie te
-            dabas cuenta de que estos test eran el reflejo de la implementación; Era un código desarrollado con muchas
-            prisas, mucha presión, poco cariño y con un deadline que se les echaba encima, aquello no había por donde
-            pillarlo.</p>
-        <p>Personalmente, me fue imposible trabajar sobre ese código
-            sin antes hacer un poco de limpieza y poner algo de orden, quise dejarlo como me habría gustado encontrarlo, quería que el
-            compañero que abriera ese código no invirtiera el mismo tiempo que invertí yo en entender lo que ahí
-            había. </p>
-        <p>Cuando empiezas a ordenar el código ves la cantidad de
-            duplicidades que existen, nombres sin sentido y métodos que no hacen lo que dicen(yo los llamo métodos
-            mentirosos). Todo esto genera una complejidad innecesaria y te das cuenta de lo importante que es trabajar
-            tranquilo en un ambiente favorable, nuestro código es un reflejo de nuestra cabeza.</p>
-        <p>Poco menos de un mes estuve sumergido en ese refactor
-            perfectamente evitable si desde el principio se habría aplicado refactor continuo y cuándo se levantó la
-            mano y se dijo que era necesario refactorizar no se hubiesen llevado las manos a la cabeza. </p>
-        <p>Al final lo barato les salió bastante caro.</p>
+    <div class="container">
+        <article class="blog-post full-post">
+            <h1>Refactor Continuo: Tu Código No es el Código de Hammurabi</h1>
+            
+            <p class="meta">Publicado el 4 de abril de 2023</p>
 
-        <p><a href="../index.html">Volver a la página principal</a></p>
+            <p>Cuando escuchas la palabra <em>refactor</em>, ¿qué te viene a la mente? Para muchos, es sinónimo de “arreglar algo que hicimos mal”, y la siguiente pregunta suele ser inevitable: “¿Cuánto me va a costar?”. Esta percepción nace porque, a menudo, tratamos el desarrollo de software como algo estático, inmutable, como si fuese el mismísimo Código de Hammurabi tallado en piedra. O, simplemente, por ese viejo dogma de: “si funciona, no lo toques”.</p>
+
+            <p>Pero necesitamos cambiar esa mentalidad. El software no es estático. No basta con modificarlo solo cuando el producto lo exige. Todo lo contrario: es dinámico y debe adaptarse constantemente a un entorno cambiante.</p>
+
+            <h3>La Deuda Técnica Siempre Pasa Factura</h3>
+
+            <p>Hace poco me encontré con un proyecto que ejemplificaba a la perfección lo que ocurre cuando se ignora el refactor. Era un código que había permanecido inalterado durante demasiado tiempo, a pesar de que claramente no funcionaba bien. Lo más sorprendente era la cantidad absurda de tests unitarios, que validaban hasta los constructores de las clases. Pero, al rascar un poco, te dabas cuenta de que esos tests eran solo un reflejo de la implementación: un código desarrollado con prisas, bajo presión, sin cariño y con un <em>deadline</em> encima. Sencillamente, era imposible trabajar con él.</p>
+
+            <h3>De Caos a Claridad: El Valor de la Limpieza</h3>
+
+            <p>Personalmente, me resultó imposible avanzar sin antes hacer algo de limpieza y poner orden. Quería dejarlo como me habría gustado encontrarlo, con la esperanza de que el próximo compañero no tuviera que invertir el mismo tiempo que yo en entender qué estaba pasando.</p>
+
+            <p>Es al ordenar cuando realmente ves la magnitud del problema: duplicidades por todas partes, nombres sin sentido y métodos que no hacen lo que prometen (¡yo los llamo “métodos mentirosos”!). Todo esto genera una complejidad innecesaria que impacta directamente en la capacidad de innovar y mantener el software. Trabajar con tranquilidad, en un entorno saludable, es clave. Nuestro código, al final, es un reflejo de nuestra cabeza.</p>
+
+            <h3>La Lección del Refactor Continuo</h3>
+
+            <p>Pasé poco menos de un mes inmerso en ese refactor, un esfuerzo que habría sido totalmente evitable si se hubiera aplicado el concepto de <em>refactor continuo</em> desde el principio. Y, sobre todo, si cuando alguien levantó la mano para decir “esto hay que refactorizar”, no se hubieran llevado las manos a la cabeza.</p>
+
+            <p>Al final, lo “barato” les salió, como casi siempre, bastante caro. La deuda técnica siempre se cobra… y con intereses.</p>
+
+<p><a href="../index.html">Volver a la página principal</a></p>
     </article>
 </div>
 
