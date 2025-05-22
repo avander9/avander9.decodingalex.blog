@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Poder del Naming: Cuando tu Código Habla por Sí Solo - Decoding Alex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+<header>
+    <h1>Decoding Alex</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="../index.html#inicio">Inicio</a></li>
+        <li><a href="../index.html#articulos">Artículos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <article class="blog-post full-post">
+        <h2>El Poder del Naming: Cuando tu Código Habla por Sí Solo</h2>
+        <p class="meta">Publicado el 22 de mayo del 2025</p>
+        
+        <p>En el mundo de la programación, existe un arte fundamental que a menudo pasa desapercibido, pero que desempeña un papel crucial en la calidad del código. Ya sea en el desarrollo cloud o en el desarrollo de aplicaciones on-premises, el arte de nombrar entidades, variables y métodos es mucho más que un simple trámite. Es un lenguaje en sí mismo, un código que comunica no solo con las máquinas, sino también con otros desarrolladores.</p>
+
+        <p>La importancia de elegir nombres descriptivos que se ajusten al contexto de tu dominio no puede subestimarse. Estos nombres son la piedra angular de la comprensión y el mantenimiento del código a lo largo de su ciclo de vida. Además de evitar confusión, facilitan la colaboración entre diferentes equipos. <strong>Utilizar nombres descriptivos en el contexto de tu dominio es esencial</strong> en el emocionante y a veces ingrato mundo de la programación. Quédate conmigo en este viaje a través de las sutilezas y las complejidades del <em>naming</em>, y descubre cómo esta elección puede marcar la diferencia entre el éxito y el caos en tus proyectos.</p>
+
+        <hr>
+
+        <h3>¿Llamarías “L” a tu hijo?</h3>
+
+        <p>Al igual que al nacer nuestros padres nos ponen un nombre para identificarnos (a veces sin pensar en que algún día pasaremos por el instituto), en la programación cada vez que nace una clase o una variable también le ponemos un nombre para identificarlos. Cierto es que a veces nos comportamos como esos padres que mencioné antes y no pensamos en las consecuencias del futuro. Un nombre que ahora te parece descriptivo no necesariamente lo será mañana cuando pases otra vez por el código y no tengas en la cabeza todo el contexto. ¡Y ese es el momento que empiezan los WTF!?.</p>
+
+        <p>Nombrar una clase o una variable es parte de nuestro código y, por lo tanto, tiene que ser descriptivo y expresivo, por eso es necesario dedicarle un momento a encontrar el nombre adecuado. Pregúntate: <strong>¿Esta variable/clase qué representa? ¿Para qué lo vamos a usar?</strong>. Analicemos el siguiente código:</p>
+
+        <pre><code>var invoceList = invoiceRepository.GetAll();
+foreach(var invoice in invoiceList)
+{
+	..Some Calc..
+}
+</code></pre>
+
+        <p>Este código a simple vista se entiende bastante bien. Quien haya trabajado con una facturación sabrá que existen las facturas recibidas y las facturas emitidas. ¡Sorpresa! Esto en el código no se especifica, por lo que para un novato en el dominio puede ser un problema y para un veterano despistado también. Sigamos para bingo. Ya sabemos que al señor “invoiceList“ le falta contexto, pero ¿Y si le añadimos al nombre su finalidad?</p>
+
+        <p>Y así nació: <code>issuedInvoicesToCalculate</code></p>
+
+        <pre><code>var issuedInvoicesToCalculate = invoiceRepository.GetAll();
+foreach(var invoice in issuedInvoicesToCalculate)
+{
+	..Some Calc..
+}
+</code></pre>
+
+        <p>Ahora sabes el qué y para qué.</p>
+
+        <hr>
+
+        <h3>¿En inglés, español o arameo antiguo?</h3>
+
+        <p>Independientemente del idioma en el que el equipo haya convenido programar, tenemos que tener presente que no todo tiene sentido en inglés. A veces, la traducción literal de un concepto del dominio a otro idioma puede perder su significado original o, peor aún, inducir a error. Aquí es donde el <strong>conocimiento profundo del dominio</strong> y la <strong>comunicación efectiva</strong> dentro del equipo se vuelven imprescindibles.</p>
+
+        <p>
+            Imagina que tu equipo está desarrollando una aplicación fiscal-contable. El IRPF es el <strong>Impuesto sobre la Renta de las Personas Físicas</strong>. Si intentas traducirlo literalmente a <strong>"Personal Income Tax"</strong>, podrías estar perdiendo matices importantes o no reflejando completamente su función específica dentro del contexto fiscal, imagínate que te toca traducir <strong>"Retenciones del Sistema Agrario Especial"</strong> 🤯. En estos casos, es preferible utilizar el término original del dominio, aunque no sea en inglés. <strong>La claridad prevalece sobre la homogeneidad lingüística.</strong>
+        </p>
+
+        <p>Claro, esto no significa que debamos mezclar idiomas sin ton ni son. La clave es establecer una <strong>convención de nombrado</strong> clara y documentada desde el principio del proyecto. Si la mayoría del código y la documentación están en inglés, pero hay términos específicos del dominio que son más claros en español (o cualquier otro idioma), se deben <strong>explicar y justificar</strong> estas excepciones. Lo importante es que cualquier desarrollador que lea el código, independientemente de su familiaridad inicial con el dominio, pueda entender qué representa cada nombre.</p>
+
+        <hr>
+
+        <h3>Nombres que cuentan una historia</h3>
+
+        <p>El <strong>naming efectivo</strong> va más allá de evitar confusiones. Se trata de contar una historia con cada nombre, de dar vida a tus entidades y de reflejar su propósito dentro de tu aplicación. Un buen nombre no solo describe lo que es una variable o una clase, sino también <strong>qué hace</strong> y <strong>por qué existe</strong>.</p>
+
+        <p>Piensa en tus nombres como micro-documentaciones. Cuando un nuevo desarrollador se une al equipo o cuando tú mismo revisas código antiguo, unos nombres bien elegidos pueden ahorrar horas de investigación y depuración. Te guían a través de la lógica del negocio, te revelan las intenciones detrás de cada pieza de código y te permiten navegar por la base de código con confianza.</p>
+
+        <p>En el fondo, el naming es una manifestación de la calidad de tu diseño. Refleja tu comprensión del <strong>Dominio</strong>, tu habilidad para modelar la realidad en el código y tu compromiso con la mantenibilidad a largo plazo. Es un arte que se perfecciona con la práctica y la reflexión constante.</p>
+
+        <p>Así que la próxima vez que te encuentres nombrando una nueva variable o una clase, detente un momento. Pregúntate: ¿Este nombre cuenta la historia completa? ¿Es descriptivo? ¿Es conciso? ¿Lo entendería alguien que no tiene todo el contexto en este momento? Si la respuesta es un rotundo sí, entonces has dado un paso más en el camino hacia un código excepcional.</p>
+
+        <p>¿Qué otras estrategias utilizas para asegurar que tus nombres sean descriptivos y reflejen el contexto de tu dominio?</p>
+
+    </article>
+</div>
+
+<footer>
+    <p>&copy; 2025 Decoding Alex. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
