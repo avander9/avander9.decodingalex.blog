@@ -13,90 +13,106 @@
     <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-<header>
-    <h1>Decoding Alex</h1>
-</header>
+    <header>
+        <h1>Decoding Alex</h1>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="../index.html#inicio">Inicio</a></li>
-        <li><a href="../index.html#articulos">Artículos</a></li>
-        <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
-        <li><a href="../index.html#contacto">Contacto</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="../index.html#inicio">Inicio</a></li>
+            <li><a href="../index.html#articulos">Artículos</a></li>
+            <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
-<div class="container">
-    <article class="blog-post full-post">
-        <h2>Mata Dragones</h2>
-        <h3>Cómo mejorar la calidad del código legado</h3>
-        <p class="meta">Publicado el 27 de marzo de 2023</p>
+    <div class="container">
+        <article class="blog-post full-post">
+            <h2>Mata Dragones: Estrategias para Domar el Código Legado</h2>
+            <p class="meta">Publicado el 27 de marzo de 2023</p>
+            
+            
+            <p>El <strong>código legado</strong> es una realidad ineludible en el desarrollo de software. Ese temible "dragón" que escupe bugs y consume tiempo precioso. La tentación de desecharlo y empezar de cero es fuerte, pero a menudo inviable. Afortunadamente, existe una alternativa poderosa y sostenible: la técnica <strong>"Mata Dragones"</strong>, un enfoque divertido y efectivo para transformar el código existente y mejorar su calidad de forma gradual.</p>
 
-        <p>¿Cómo mejorar la calidad del código legado? Esta es una pregunta recurrente en el desarrollo de software, y no hay dudas de que la mejor manera es tirarlo y hacerlo bien. Tampoco hay dudas de que esta es muy extrema y costosa, pero no es la única. Hay una divertida y sostenible: la mata dragones.</p> 
-        <p>Primero definamos 2 conceptos clave:</p>
+            <hr>
 
-        <p><strong>¿Qué es un código de calidad?</strong></p>
-        <p>Se podría definir como legible, descriptivo, sostenible, testeado, auto explicativo, etc.</p>
-        <p><strong>La IA lo define de esta manera:</strong></p>
-        <p><em>Un código de calidad se refiere a un conjunto de características y prácticas que hacen que el código sea fácil de entender, mantener, escalar y modificar en el futuro. Un código de calidad también se asegura de que el software sea eficiente, seguro, confiable y cumpla con los requisitos funcionales y no funcionales.</em></p>
-        <p>A ver si esto de hacer código de calidad no va a ser tan fácil, ¡oiga!</p>
+            <h2>Clarificando Conceptos Clave</h2>
+            <p>Para entender cómo domar a este dragón, primero definamos dos conceptos esenciales:</p>
 
-        <p><strong>¿Qué es código legado?</strong></p>
-        <p>¿Lo definirías como código viejo u obsoleto? La verdad es que el código legado es todo el código que llega a nuestras manos y del cual no tenemos conocimiento. Ese código que nuestro compañero escribió ayer y nosotros estamos revisando hoy es código legado.</p>
-        <p>Pero la verdad es que ese código suele ser un dragón de 6 cabezas que escupen bugs que a su vez escupen fuego.</p>
-        <figure class="image">
-            <a href="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png">
-                <img src="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png" alt="El dragón de 6 cabezas del legacy code. Esto es una hydra pero tú me entiendes."/>
-            </a>
-            <figcaption>El dragón de 6 cabezas del legacy code. Esto es una hydra pero tú me entiendes.</figcaption>
-        </figure>
-        
-        <h2><strong>¿Cómo matamos al dragón?</strong></h2>
-        <p>Para matar este dragón pondremos en práctica la técnica del <strong>refactor</strong> junto con la regla de los 3 movimientos del mata dragones. El primer movimiento es la pregunta más evidente:</p>
+            <h3>¿Qué es Código de Calidad?</h3>
+            <p>Imagina un software que es un placer tocar: <strong>legible</strong>, <strong>descriptivo</strong>, <strong>sostenible</strong>, y <strong>autoexplicativo</strong>. Un código de calidad es aquel que es fácil de entender, mantener, escalar y modificar. Además, es <strong>eficiente</strong>, <strong>seguro</strong>, <strong>confiable</strong> y cumple con todos los requisitos del proyecto. En resumen, es un código que te permite avanzar rápido y con confianza.</p>
 
-        <h2><strong>¿Por cuál cabeza empiezo?</strong></h2>
-        <p>No intentes hacerlo todo a la vez, define un alcance. Puedes guiarte por un indicador de código estático o puedes empezar por un conjunto de clases e ir iterando sobre eso.</p>
-        <p>Pregúntate:</p>
-        <ol>
-            <li>¿Qué métodos de análisis de código tienes para apoyarte? ¿Realizáis Pull Request, quizás SonarQube o tienes test unitarios?</li>
-            <li>¿Cuál es tu cobertura de código actual? Una baja cobertura de código representa un riesgo potencial asociado al refactor.</li>
-            <li>¿Cuánta limpieza es necesaria? Echa un vistazo al código y fíjate en los nombres de las clases, métodos y variables. ¿Son descriptivos? Las clases interminables, código duplicado y cualquier tipo de <strong>code smell</strong> que puedas detectar. Todo eso te dará una perspectiva del estado del código.</li>
-        </ol>
+            <h3>¿Qué es Código Legado?</h3>
+            <p>Olvídate de la edad. El <strong>código legado</strong> no es simplemente 'código viejo'. Es cualquier código que llega a tus manos y del que <strong>no tienes un conocimiento profundo</strong>. Puede ser el módulo que escribió tu colega ayer, o un sistema de hace diez años. Es ese "dragón de seis cabezas" que, sin los conocimientos adecuados, puede escupir bugs y ralentizar el desarrollo. Nuestro objetivo es domarlo.</p>
 
-        <h2><strong>¡Seguridad ante todo!</strong></h2>
-        <p>No podemos empezar esta aventura sin protegernos. Lo primero que debemos hacer es garantizar que el código sigue funcionando mientras refactorizamos, y para esto los test automatizados son tus mejores aliados. Si desconoces lo que es un test automatizado, lo mejor es empezar por las técnicas de <strong>Black Box Testing</strong> o test de caja negra.</p>
-        <p>Un test de caja negra consiste en que, a partir de un input, el software reacciona generando un output sin necesidad de testear el comportamiento interno del sistema.</p>
+            <figure class="image">
+                <a href="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png">
+                    <img src="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png" alt="El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes." />
+                </a>
+                <figcaption>El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes.</figcaption>
+            </figure>
 
-        <figure class="image" style="display: flex; flex-direction: column; align-items: center;">
-            <a href="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg" style="display: block; margin: 0 auto;"/>
-            </a>
-        </figure>
+            <hr>
 
-        <p>Usemos un ejemplo:</p>
-        <p>Sabemos que una factura con 2 bases genera un asiento contable con 2 apuntes de IVA.</p>
-        <p>En este caso el input sería: "Una factura con 2 bases" y "genera un asiento con 2 apuntes de IVA" sería el output.</p>
-        <p>Otro ejemplo sería este: Una factura sin bases genera un error. En este tenemos el input "Una factura sin bases" y su output "genera un error".</p>
-        <p>Esto es lo que llamamos “capture behaviour” o capturar el comportamiento del sistema.</p>
+            <h2>La Estrategia "Mata Dragones": Cómo Enfrentar al Dragón</h2>
+            <p>Para <strong>matar a este dragón</strong>, combinaremos el poder del <strong>refactor</strong> con la <strong>regla de los tres movimientos del Mata Dragones</strong>. Prepárate para el primer movimiento crucial:</p>
 
-        <h2><strong>La estocada.</strong></h2>
-        <p>Ahora que ya tenemos un alcance definido y los test de caja negra para cubrirnos las espaldas, es hora de enfrentarnos al dragón. En este momento debes centrarte en <strong>Refactorizar, Ejecutar los test y Cubrir lo nuevo con test unitarios</strong>. Ahora mismo estamos en el mejor momento para buscar una buena cobertura de código, nuestro objetivo es que todo el código nuevo esté cubierto por un test que garantice su funcionalidad, además de que aporta robustez al software.</p>
+            <h3>1. ¿Por Cuál Cabeza Empiezo? Define tu Alcance</h3>
+            <p>No intentes atacar a todas las cabezas del dragón a la vez. El secreto es <strong>definir un alcance manejable</strong>. Puedes usar herramientas de <strong>análisis de código estático</strong> o simplemente elegir un conjunto de clases o módulos para empezar a iterar. Para ayudarte a decidir, pregúntate:</p>
+            <ul>
+                <li><strong>¿Qué métodos de análisis de código tengo a mi disposición?</strong> ¿Realizamos <strong>Pull Requests</strong> rigurosos? ¿Usamos herramientas como <strong>SonarQube</strong>? ¿Disponemos de <strong>tests unitarios</strong>? Estas herramientas son tus ojos dentro del código.</li>
+                <li><strong>¿Cuál es mi cobertura de código actual?</strong> Una <strong>baja cobertura</strong> es una señal de alerta y un <strong>riesgo potencial</strong> al refactorizar. Necesitarás más precaución y una estrategia de testing sólida.</li>
+                <li><strong>¿Cuánta "limpieza" es realmente necesaria?</strong> Echa un vistazo rápido a los nombres de clases, métodos y variables. ¿Son <strong>descriptivos</strong>? Identifica <strong>clases interminables</strong>, <strong>código duplicado</strong> o cualquier otro <strong>"code smell"</strong> evidente. Esto te dará una perspectiva clara del estado del código y por dónde empezar a mejorar.</li>
+            </ul>
 
-        <p><strong>Recordemos:</strong></p>
-        <ol>
-            <li><strong>Una cabeza a la vez</strong>: Vayamos poco a poco y definamos un scope alcanzable que nos ayude a ver resultados desde el primer día.</li>
-            <li><strong>Siempre con el escudo</strong>: Los test automáticos deben cubrirnos las espaldas.</li>
-            <li><strong>Refactoriza, Prueba, y Cubre.</strong> Esta es la estocada que irá debilitando al dragón.</li>
-        </ol>
-        <p>El refactor continuo es necesario si queremos tener un código vivo, actualizado y a prueba del paso del tiempo. Como desarrolladores nos ayuda a conocer el código para reducir el tiempo de entrega de nuevas funcionalidades y como producto nos permite ser ágiles y reducir el <strong>Time to Value</strong><em>.</em></p>
-        
+            <hr>
 
-        <p><a href="../index.html">Volver a la página principal</a></p>
-    </article>
-</div>
+            <h2>¡Seguridad Ante Todo! Tu Escudo Protector: Los Tests Automatizados</h2>
+            <p>Antes de lanzarte a la batalla, asegúrate de estar bien protegido. Nuestra primera línea de defensa para garantizar que el código sigue funcionando mientras refactorizamos son los <strong>tests automatizados</strong>. Son tus aliados más poderosos.</p>
 
-<footer>
-    <p>&copy; 2025 Decoding Alex. Todos los derechos reservados.</p>
-</footer>
+            <p>Si el concepto de <strong>tests automatizados</strong> es nuevo para ti, un excelente punto de partida es el <strong>Black Box Testing</strong> (o test de caja negra).</p>
+
+            <p>Un <strong>test de caja negra</strong> se enfoca en el <strong>comportamiento externo del sistema</strong>: qué output produce ante un input determinado, sin importar cómo funciona internamente. Es como si observaras una caja negra: metes algo por un lado y ves lo que sale por el otro, sin abrirla.</p>
+
+
+            <figure class="image" style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg" style="display: block; margin: 0 auto;" />
+                </a>
+            </figure>
+
+
+
+            <p>Usemos un ejemplo:</p>
+            <ul>
+                <li><strong>Escenario 1:</strong> Una factura con dos bases genera un asiento contable con dos apuntes de IVA. (Input: factura con dos bases; Output: asiento con dos apuntes de IVA).</li>
+                <li><strong>Escenario 2:</strong> Una factura sin bases genera un error. (Input: factura sin bases; Output: error).</li>
+            </ul>
+            <p>Esto es lo que llamamos <strong>"capture behaviour"</strong> o <strong>capturar el comportamiento</strong> del sistema. Nos permite tener la confianza de que nuestros cambios no rompen funcionalidades existentes.</p>
+
+            <hr>
+
+            <h2>La Estocada Final: Refactorizar, Probar, Cubrir</h2>
+            <p>Con un <strong>alcance definido</strong> y los <strong>tests de caja negra</strong> cubriéndonos las espaldas, es hora de enfrentar al dragón. En este punto, tu foco debe ser: <strong>Refactorizar</strong>, <strong>Ejecutar los tests</strong> y <strong>Cubrir lo nuevo con tests unitarios</strong>. Este es el momento ideal para buscar una <strong>buena cobertura de código</strong>. Nuestro objetivo es que todo el código nuevo que añadas o modifiques esté cubierto por tests que garanticen su funcionalidad, aportando una robustez inigualable al software.</p>
+
+            <h3>Recuerda los Tres Movimientos Clave:</h3>
+            <ol>
+                <li><strong>Una cabeza a la vez:</strong> Aborda el problema poco a poco, con un <strong>scope alcanzable</strong> que te permita ver resultados y ganar confianza desde el primer día.</li>
+                <li><strong>Siempre con el escudo:</strong> Los <strong>tests automáticos</strong> son tu protección. Asegúrate de que te cubran las espaldas en todo momento.</li>
+                <li><strong>Refactoriza, Prueba y Cubre:</strong> Esta es la secuencia de la "estocada" que irá debilitando al dragón, mejorando la calidad del código incrementalmente.</li>
+            </ol>
+
+            <hr>
+
+            <p>El <strong>refactor continuo</strong> no es un lujo, sino una necesidad para mantener un código <strong>vivo, actualizado y a prueba del paso del tiempo</strong>. Como desarrolladores, nos permite <strong>conocer el código a fondo</strong>, reducir el <strong>tiempo de entrega de nuevas funcionalidades</strong> y, en última instancia, ser más productivos. Desde la perspectiva del producto, nos habilita a ser <strong>ágiles</strong> y a reducir el <strong>Time to Value</strong>, entregando valor más rápido a nuestros usuarios. ¡Es hora de matar a tus dragones y liberar el potencial de tu código!</p>
+
+
+            <p><a href="../index.html">Volver a la página principal</a></p>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Decoding Alex. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
