@@ -6,113 +6,185 @@
     <title>Mata Dragones - Decoding Alex</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
 </head>
 <body>
-    <header>
-        <h1>Decoding Alex</h1>
-    </header>
+<header>
+    <h1>Decoding Alex</h1>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html#inicio">Inicio</a></li>
-            <li><a href="../index.html#articulos">Artículos</a></li>
-            <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
-            <li><a href="../index.html#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="../index.html#inicio">Inicio</a></li>
+        <li><a href="../index.html#articulos">Artículos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-    <div class="container">
-        <article class="blog-post full-post">
-            <h2>Mata Dragones: Estrategias para Domar el Código Legado</h2>
-            <p class="meta">Publicado el 27 de marzo de 2023</p>
-            
-            
-            <p>El <strong>código legado</strong> es una realidad ineludible en el desarrollo de software. Ese temible "dragón" que escupe bugs y consume tiempo precioso. La tentación de desecharlo y empezar de cero es fuerte, pero a menudo inviable. Afortunadamente, existe una alternativa poderosa y sostenible: la técnica <strong>"Mata Dragones"</strong>, un enfoque divertido y efectivo para transformar el código existente y mejorar su calidad de forma gradual.</p>
+<div class="container">
+    <article class="blog-post full-post">
+        <h2>Mata Dragones: Estrategias para Domar el Código Legado</h2>
+        <p class="meta">Publicado el 27 de marzo de 2023</p>
 
-            <hr>
 
-            <h2>Clarificando Conceptos Clave</h2>
-            <p>Para entender cómo domar a este dragón, primero definamos dos conceptos esenciales:</p>
+        <p>El <strong>código legado</strong> es una realidad ineludible en el desarrollo de software. Ese temible
+            "dragón" que escupe bugs y consume tiempo precioso. La tentación de desecharlo y empezar de cero es fuerte,
+            pero a menudo inviable. Afortunadamente, existe una alternativa poderosa y sostenible: la técnica <strong>"Mata
+                Dragones"</strong>, un enfoque divertido y efectivo para transformar el código existente y mejorar su
+            calidad de forma gradual.</p>
 
-            <h3>¿Qué es Código de Calidad?</h3>
-            <p>Imagina un software que es un placer tocar: <strong>legible</strong>, <strong>descriptivo</strong>, <strong>sostenible</strong>, y <strong>autoexplicativo</strong>. Un código de calidad es aquel que es fácil de entender, mantener, escalar y modificar. Además, es <strong>eficiente</strong>, <strong>seguro</strong>, <strong>confiable</strong> y cumple con todos los requisitos del proyecto. En resumen, es un código que te permite avanzar rápido y con confianza.</p>
+        <hr>
 
-            <h3>¿Qué es Código Legado?</h3>
-            <p>Olvídate de la edad. El <strong>código legado</strong> no es simplemente 'código viejo'. Es cualquier código que llega a tus manos y del que <strong>no tienes un conocimiento profundo</strong>. Puede ser el módulo que escribió tu colega ayer, o un sistema de hace diez años. Es ese "dragón de seis cabezas" que, sin los conocimientos adecuados, puede escupir bugs y ralentizar el desarrollo. Nuestro objetivo es domarlo.</p>
+        <h2>Clarificando Conceptos Clave</h2>
+        <p>Para entender cómo domar a este dragón, primero definamos dos conceptos esenciales:</p>
 
-            <figure class="image">
+        <h3>¿Qué es Código de Calidad?</h3>
+        <p>Imagina un software que es un placer tocar: <strong>legible</strong>, <strong>descriptivo</strong>, <strong>sostenible</strong>,
+            y <strong>autoexplicativo</strong>. Un código de calidad es aquel que es fácil de entender, mantener,
+            escalar y modificar. Además, es <strong>eficiente</strong>, <strong>seguro</strong>,
+            <strong>confiable</strong> y cumple con todos los requisitos del proyecto. En resumen, es un código que te
+            permite avanzar rápido y con confianza.</p>
+
+        <h3>¿Qué es Código Legado?</h3>
+        <p>Olvídate de la edad. El <strong>código legado</strong> no es simplemente 'código viejo'. Es cualquier código
+            que llega a tus manos y del que <strong>no tienes un conocimiento profundo</strong>. Puede ser el módulo que
+            escribió tu colega ayer, o un sistema de hace diez años. Es ese "dragón de seis cabezas" que, sin los
+            conocimientos adecuados, puede escupir bugs y ralentizar el desarrollo. Nuestro objetivo es domarlo.</p>
+
+        <div style="text-align: center;">
+            <figure class="image" style="display: flex; flex-direction: column; align-items: center;">
                 <a href="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png">
-                    <img src="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png" alt="El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes." />
+                    <img src="https://i.pinimg.com/originals/51/cd/6d/51cd6d4d54ee6ab93092779dae68c907.png"
+                         alt="El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes."
+                         height="500"
+                         width="500" style="display: block; margin: 0 auto;"/>
                 </a>
-                <figcaption>El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes.</figcaption>
+                <figcaption>El dragón de 6 cabezas del legacy code. Esto es una hydra, pero tú me entiendes.
+                </figcaption>
             </figure>
+        </div>
 
-            <hr>
+        <hr>
 
-            <h2>La Estrategia "Mata Dragones": Cómo Enfrentar al Dragón</h2>
-            <p>Para <strong>matar a este dragón</strong>, combinaremos el poder del <strong>refactor</strong> con la <strong>regla de los tres movimientos del Mata Dragones</strong>. Prepárate para el primer movimiento crucial:</p>
+        <h2>La Estrategia "Mata Dragones": Cómo Enfrentar al Dragón</h2>
+        <p>Para <strong>matar a este dragón</strong>, combinaremos el poder del <strong>refactor</strong> con la
+            <strong>regla de los tres movimientos del Mata Dragones</strong>. Prepárate para el primer movimiento
+            crucial:</p>
 
-            <h3>1. ¿Por Cuál Cabeza Empiezo? Define tu Alcance</h3>
-            <p>No intentes atacar a todas las cabezas del dragón a la vez. El secreto es <strong>definir un alcance manejable</strong>. Puedes usar herramientas de <strong>análisis de código estático</strong> o simplemente elegir un conjunto de clases o módulos para empezar a iterar. Para ayudarte a decidir, pregúntate:</p>
-            <ul>
-                <li><strong>¿Qué métodos de análisis de código tengo a mi disposición?</strong> ¿Realizamos <strong>Pull Requests</strong> rigurosos? ¿Usamos herramientas como <strong>SonarQube</strong>? ¿Disponemos de <strong>tests unitarios</strong>? Estas herramientas son tus ojos dentro del código.</li>
-                <li><strong>¿Cuál es mi cobertura de código actual?</strong> Una <strong>baja cobertura</strong> es una señal de alerta y un <strong>riesgo potencial</strong> al refactorizar. Necesitarás más precaución y una estrategia de testing sólida.</li>
-                <li><strong>¿Cuánta "limpieza" es realmente necesaria?</strong> Echa un vistazo rápido a los nombres de clases, métodos y variables. ¿Son <strong>descriptivos</strong>? Identifica <strong>clases interminables</strong>, <strong>código duplicado</strong> o cualquier otro <strong>"code smell"</strong> evidente. Esto te dará una perspectiva clara del estado del código y por dónde empezar a mejorar.</li>
-            </ul>
+        <h3>1. ¿Por Cuál Cabeza Empiezo? Define tu Alcance</h3>
+        <p>No intentes atacar a todas las cabezas del dragón a la vez. El secreto es <strong>definir un alcance
+            manejable</strong>. Puedes usar herramientas de <strong>análisis de código estático</strong> o simplemente
+            elegir un conjunto de clases o módulos para empezar a iterar. Para ayudarte a decidir, pregúntate:</p>
+        <ul>
+            <li><strong>¿Qué métodos de análisis de código tengo a mi disposición?</strong> ¿Realizamos <strong>Pull
+                Requests</strong> rigurosos? ¿Usamos herramientas como <strong>SonarQube</strong>? ¿Disponemos de
+                <strong>tests unitarios</strong>? Estas herramientas son tus ojos dentro del código.
+            </li>
+            <li><strong>¿Cuál es mi cobertura de código actual?</strong> Una <strong>baja cobertura</strong> es una
+                señal de alerta y un <strong>riesgo potencial</strong> al refactorizar. Necesitarás más precaución y una
+                estrategia de testing sólida.
+            </li>
+            <li><strong>¿Cuánta "limpieza" es realmente necesaria?</strong> Echa un vistazo rápido a los nombres de
+                clases, métodos y variables. ¿Son <strong>descriptivos</strong>? Identifica <strong>clases
+                    interminables</strong>, <strong>código duplicado</strong> o cualquier otro <strong>"code
+                    smell"</strong> evidente. Esto te dará una perspectiva clara del estado del código y por dónde
+                empezar a mejorar.
+            </li>
+        </ul>
 
-            <hr>
+        <hr>
 
-            <h2>¡Seguridad Ante Todo! Tu Escudo Protector: Los Tests Automatizados</h2>
-            <p>Antes de lanzarte a la batalla, asegúrate de estar bien protegido. Nuestra primera línea de defensa para garantizar que el código sigue funcionando mientras refactorizamos son los <strong>tests automatizados</strong>. Son tus aliados más poderosos.</p>
+        <h2>¡Seguridad Ante Todo! Tu Escudo Protector: Los Tests Automatizados</h2>
+        <p>Antes de lanzarte a la batalla, asegúrate de estar bien protegido. Nuestra primera línea de defensa para
+            garantizar que el código sigue funcionando mientras refactorizamos son los <strong>tests
+                automatizados</strong>. Son tus aliados más poderosos.</p>
 
-            <p>Si el concepto de <strong>tests automatizados</strong> es nuevo para ti, un excelente punto de partida es el <strong>Black Box Testing</strong> (o test de caja negra).</p>
+        <p>Si el concepto de <strong>tests automatizados</strong> es nuevo para ti, un excelente punto de partida es el
+            <strong>Black Box Testing</strong> (o test de caja negra).</p>
 
-            <p>Un <strong>test de caja negra</strong> se enfoca en el <strong>comportamiento externo del sistema</strong>: qué output produce ante un input determinado, sin importar cómo funciona internamente. Es como si observaras una caja negra: metes algo por un lado y ves lo que sale por el otro, sin abrirla.</p>
+        <p>Un <strong>test de caja negra</strong> se enfoca en el <strong>comportamiento externo del sistema</strong>:
+            qué output produce ante un input determinado, sin importar cómo funciona internamente. Es como si observaras
+            una caja negra: metes "algo" por un lado y ves lo que sale por el otro, sin abrirla.</p>
 
-
+        <div style="text-align: center;">
             <figure class="image" style="display: flex; flex-direction: column; align-items: center;">
                 <a href="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg" style="display: block; margin: 0 auto;" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Black_box_diagram.svg"
+                         style="display: block; margin: 0 auto;" height="500" width="500" alt=""/>
                 </a>
+                <figcaption>Test de caja negra</figcaption>
             </figure>
+        </div>
 
 
+        <p>Usemos un ejemplo:</p>
+        <ul>
+            <li><strong>Escenario 1:</strong> Una factura con dos bases genera un asiento contable con dos apuntes de
+                IVA. (Input: factura con dos bases; Output: asiento con dos apuntes de IVA).
+            </li>
+            <li><strong>Escenario 2:</strong> Una factura sin bases genera un error. (Input: factura sin bases; Output:
+                error).
+            </li>
+        </ul>
+        <p>Esto es lo que llamamos <strong>"capture behaviour"</strong> o <strong>capturar el comportamiento</strong>
+            del sistema. Nos permite tener la confianza de que nuestros cambios no rompen funcionalidades existentes.
+        </p>
 
-            <p>Usemos un ejemplo:</p>
-            <ul>
-                <li><strong>Escenario 1:</strong> Una factura con dos bases genera un asiento contable con dos apuntes de IVA. (Input: factura con dos bases; Output: asiento con dos apuntes de IVA).</li>
-                <li><strong>Escenario 2:</strong> Una factura sin bases genera un error. (Input: factura sin bases; Output: error).</li>
-            </ul>
-            <p>Esto es lo que llamamos <strong>"capture behaviour"</strong> o <strong>capturar el comportamiento</strong> del sistema. Nos permite tener la confianza de que nuestros cambios no rompen funcionalidades existentes.</p>
+        <hr>
 
-            <hr>
+        <h2>La Estocada Final: Refactorizar, Probar, Cubrir</h2>
+        <p>Con un <strong>alcance definido</strong> y los <strong>tests de caja negra</strong> cubriéndonos las
+            espaldas, es hora de enfrentar al dragón. En este punto, tu foco debe ser: <strong>Refactorizar</strong>,
+            <strong>Ejecutar los tests</strong> y <strong>Cubrir lo nuevo con tests unitarios</strong>. Este es el
+            momento ideal para buscar una <strong>buena cobertura de código</strong>. Nuestro objetivo es que todo el
+            código nuevo que añadas o modifiques esté cubierto por tests que garanticen su funcionalidad, aportando una
+            robustez inigualable al software.</p>
 
-            <h2>La Estocada Final: Refactorizar, Probar, Cubrir</h2>
-            <p>Con un <strong>alcance definido</strong> y los <strong>tests de caja negra</strong> cubriéndonos las espaldas, es hora de enfrentar al dragón. En este punto, tu foco debe ser: <strong>Refactorizar</strong>, <strong>Ejecutar los tests</strong> y <strong>Cubrir lo nuevo con tests unitarios</strong>. Este es el momento ideal para buscar una <strong>buena cobertura de código</strong>. Nuestro objetivo es que todo el código nuevo que añadas o modifiques esté cubierto por tests que garanticen su funcionalidad, aportando una robustez inigualable al software.</p>
+        <h3>Recuerda los Tres Movimientos Clave:</h3>
+        <ol>
+            <li><strong>Una cabeza a la vez:</strong> Aborda el problema poco a poco, con un <strong>scope
+                alcanzable</strong> que te permita ver resultados y ganar confianza desde el primer día.
+            </li>
+            <li><strong>Siempre con el escudo:</strong> Los <strong>tests automáticos</strong> son tu protección.
+                Asegúrate de que te cubran las espaldas en todo momento.
+            </li>
+            <li><strong>Refactoriza, Prueba y Cubre:</strong> Esta es la secuencia de la "estocada" que irá debilitando
+                al dragón, mejorando la calidad del código incrementalmente.
+            </li>
+        </ol>
 
-            <h3>Recuerda los Tres Movimientos Clave:</h3>
-            <ol>
-                <li><strong>Una cabeza a la vez:</strong> Aborda el problema poco a poco, con un <strong>scope alcanzable</strong> que te permita ver resultados y ganar confianza desde el primer día.</li>
-                <li><strong>Siempre con el escudo:</strong> Los <strong>tests automáticos</strong> son tu protección. Asegúrate de que te cubran las espaldas en todo momento.</li>
-                <li><strong>Refactoriza, Prueba y Cubre:</strong> Esta es la secuencia de la "estocada" que irá debilitando al dragón, mejorando la calidad del código incrementalmente.</li>
-            </ol>
+        <div style="text-align: center;">
+            <figure class="image" style="display: flex; flex-direction: column; align-items: center;">
+                <a href="https://www.monkeyuser.com/2019/hack-slash-revert/">
+                    <img src="https://www.monkeyuser.com/2019/hack-slash-revert/134-hack-slash-revert.png"
+                         alt="El Código de Hammurabi"
+                         height="500" width="500" style="display: block; margin: 0 auto;"/>
+                </a>
+                <figcaption>Los 3 movimientos</figcaption>
+            </figure>
+        </div>
 
-            <hr>
+        <hr>
 
-            <p>El <strong>refactor continuo</strong> no es un lujo, sino una necesidad para mantener un código <strong>vivo, actualizado y a prueba del paso del tiempo</strong>. Como desarrolladores, nos permite <strong>conocer el código a fondo</strong>, reducir el <strong>tiempo de entrega de nuevas funcionalidades</strong> y, en última instancia, ser más productivos. Desde la perspectiva del producto, nos habilita a ser <strong>ágiles</strong> y a reducir el <strong>Time to Value</strong>, entregando valor más rápido a nuestros usuarios. ¡Es hora de matar a tus dragones y liberar el potencial de tu código!</p>
+        <p>El <strong>refactor continuo</strong> no es un lujo, sino una necesidad para mantener un código <strong>vivo,
+            actualizado y a prueba del paso del tiempo</strong>. Como desarrolladores, nos permite <strong>conocer el
+            código a fondo</strong>, reducir el <strong>tiempo de entrega de nuevas funcionalidades</strong> y, en
+            última instancia, ser más productivos. Desde la perspectiva del producto, nos habilita a ser
+            <strong>ágiles</strong> y a reducir el <strong>Time to Value</strong>, entregando valor más rápido a
+            nuestros usuarios. ¡Es hora de matar a tus dragones y liberar el potencial de tu código!</p>
 
 
-            <p><a href="../index.html">Volver a la página principal</a></p>
-        </article>
-    </div>
+        <p><a href="../index.html">Volver a la página principal</a></p>
+    </article>
+</div>
 
-    <footer>
-        <p>&copy; 2025 Decoding Alex. Todos los derechos reservados.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Decoding Alex. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>

@@ -6,53 +6,104 @@
     <title>Refactor Continuo: Tu Código No es el Código de Hammurabi - Decoding Alex</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
 </head>
 <body>
-    <header>
-        <h1>Decoding Alex</h1>
-    </header>
+<header>
+    <h1>Decoding Alex</h1>
+</header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html#inicio">Inicio</a></li>
-            <li><a href="../index.html#articulos">Artículos</a></li>
-            <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
-            <li><a href="../index.html#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="../index.html#inicio">Inicio</a></li>
+        <li><a href="../index.html#articulos">Artículos</a></li>
+        <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+    </ul>
+</nav>
 
-    <div class="container">
-        <article class="blog-post full-post">
-            <h1>Refactor Continuo: Tu Código No es el Código de Hammurabi</h1>
-            
-            <p class="meta">Publicado el 4 de abril de 2023</p>
+<div class="container">
+    <article class="blog-post full-post">
+        <h1>Refactor Continuo: Tu Código No es el Código de Hammurabi</h1>
 
-            <p>Cuando escuchas la palabra <em>refactor</em>, ¿qué te viene a la mente? Para muchos, es sinónimo de “arreglar algo que hicimos mal”, y la siguiente pregunta suele ser inevitable: “¿Cuánto me va a costar?”. Esta percepción nace porque, a menudo, tratamos el desarrollo de software como algo estático, inmutable, como si fuese el mismísimo Código de Hammurabi tallado en piedra. O, simplemente, por ese viejo dogma de: “si funciona, no lo toques”.</p>
+        <p class="meta">Publicado el 4 de abril de 2023</p>
 
-            <p>Pero necesitamos cambiar esa mentalidad. El software no es estático. No basta con modificarlo solo cuando el producto lo exige. Todo lo contrario: es dinámico y debe adaptarse constantemente a un entorno cambiante.</p>
+        <div style="text-align: center;">
+            <figure class="image">
+                <a href="https://www.worldhistory.org/uploads/images/541.jpg">
+                    <img src="https://www.worldhistory.org/uploads/images/541.jpg" alt="El Código de Hammurabi"
+                         height="500" width="500" style="display: block; margin: 0 auto;"/>
+                </a>
+                <figcaption>Código de Hammurabi.</figcaption>
+            </figure>
+        </div>
+        <p>Cuando escuchas la palabra <em>refactor</em>, ¿qué te viene a la mente? Para muchos, es sinónimo de “arreglar
+            algo que hicimos mal”, y la siguiente pregunta suele ser inevitable: “¿Cuánto me va a costar?”. Esta
+            percepción nace porque, a menudo, tratamos el desarrollo de software como algo estático, inmutable, como si
+            fuese el mismísimo Código de Hammurabi tallado en piedra. O, simplemente, por ese viejo dogma de: “si
+            funciona, no lo toques”.</p>
 
-            <h3>La Deuda Técnica Siempre Pasa Factura</h3>
+        <p>Pero necesitamos cambiar esa mentalidad. El software no es estático. No basta con modificarlo solo cuando el
+            producto lo exige. Todo lo contrario: es dinámico y debe adaptarse constantemente a un entorno
+            cambiante.</p>
+        <hr>
 
-            <p>Hace poco me encontré con un proyecto que ejemplificaba a la perfección lo que ocurre cuando se ignora el refactor. Era un código que había permanecido inalterado durante demasiado tiempo, a pesar de que claramente no funcionaba bien. Lo más sorprendente era la cantidad absurda de tests unitarios, que validaban hasta los constructores de las clases. Pero, al rascar un poco, te dabas cuenta de que esos tests eran solo un reflejo de la implementación: un código desarrollado con prisas, bajo presión, sin cariño y con un <em>deadline</em> encima. Sencillamente, era imposible trabajar con él.</p>
+        <h3>La Deuda Técnica Siempre Pasa Factura</h3>
 
-            <h3>De Caos a Claridad: El Valor de la Limpieza</h3>
+        <p>Hace poco me encontré con un proyecto que ejemplificaba a la perfección lo que ocurre cuando se ignora el
+            refactor. Era un código que había permanecido inalterado durante demasiado tiempo, a pesar de que claramente
+            no funcionaba bien. Lo más sorprendente era la cantidad absurda de tests unitarios, que validaban hasta los
+            constructores de las clases. Pero, al rascar un poco, te dabas cuenta de que esos tests eran solo un reflejo
+            de la implementación: un código desarrollado con prisas, bajo presión, sin cariño y con un <em>deadline</em>
+            encima. Sencillamente, era imposible trabajar con él.</p>
 
-            <p>Personalmente, me resultó imposible avanzar sin antes hacer algo de limpieza y poner orden. Quería dejarlo como me habría gustado encontrarlo, con la esperanza de que el próximo compañero no tuviera que invertir el mismo tiempo que yo en entender qué estaba pasando.</p>
+        <div style="text-align: center;">
+            <figure class="image">
+                <a href="https://www.monkeyuser.com/2018/tech-debt/">
+                    <img src="https://www.monkeyuser.com/2018/tech-debt/106-tech-debt.png" alt="Deuda Técnica"
+                         height="500" width="500" style="display: block; margin: 0 auto;"/>
+                </a>
+                <figcaption>Es mejor tener deudas con hacienda.</figcaption>
+            </figure>
+        </div>
+        
+        <hr>
+        <h3>De Caos a Claridad: El Valor de la Limpieza</h3>
 
-            <p>Es al ordenar cuando realmente ves la magnitud del problema: duplicidades por todas partes, nombres sin sentido y métodos que no hacen lo que prometen (¡yo los llamo “métodos mentirosos”!). Todo esto genera una complejidad innecesaria que impacta directamente en la capacidad de innovar y mantener el software. Trabajar con tranquilidad, en un entorno saludable, es clave. Nuestro código, al final, es un reflejo de nuestra cabeza.</p>
+        <p>Personalmente, me resultó imposible avanzar sin antes hacer algo de limpieza y poner orden. Quería dejarlo
+            como me habría gustado encontrarlo, con la esperanza de que el próximo compañero no tuviera que invertir el
+            mismo tiempo que yo en entender qué estaba pasando.</p>
 
-            <h3>La Lección del Refactor Continuo</h3>
+        <p>Es al ordenar cuando realmente ves la magnitud del problema: duplicidades por todas partes, nombres sin
+            sentido y métodos que no hacen lo que prometen (¡yo los llamo “métodos mentirosos”!). Todo esto genera una
+            complejidad innecesaria que impacta directamente en la capacidad de innovar y mantener el software. Trabajar
+            con tranquilidad, en un entorno saludable, es clave. Nuestro código, al final, es un reflejo de nuestra
+            cabeza.</p>
+        <div style="text-align: center;">
+            <figure class="image">
+                <a href="https://www.monkeyuser.com/2021/observer/">
+                    <img src="https://www.monkeyuser.com/2021/observer/217-observer.png" alt="Refactor Contínuo"
+                         height="500" width="500" style="display: block; margin: 0 auto;"/>
+                </a>
+                <figcaption>Cuando el deber toca la puerta.</figcaption>
+            </figure>
+        </div>
+        <hr>
+        <h3>La Lección del Refactor Continuo</h3>
 
-            <p>Pasé poco menos de un mes inmerso en ese refactor, un esfuerzo que habría sido totalmente evitable si se hubiera aplicado el concepto de <em>refactor continuo</em> desde el principio. Y, sobre todo, si cuando alguien levantó la mano para decir “esto hay que refactorizar”, no se hubieran llevado las manos a la cabeza.</p>
+        <p>Pasé poco menos de un mes inmerso en ese refactor, un esfuerzo que habría sido totalmente evitable si se
+            hubiera aplicado el concepto de <em>refactor continuo</em> desde el principio. Y, sobre todo, si cuando
+            alguien levantó la mano para decir “esto hay que refactorizar”, no se hubieran llevado las manos a la
+            cabeza.</p>
 
-            <p>Al final, lo “barato” les salió, como casi siempre, bastante caro. La deuda técnica siempre se cobra… y con intereses.</p>
+        <p>Al final, lo “barato” les salió, como casi siempre, bastante caro. La deuda técnica siempre se cobra… y con
+            intereses.</p>
 
-<p><a href="../index.html">Volver a la página principal</a></p>
+        <p><a href="../index.html">Volver a la página principal</a></p>
     </article>
 </div>
 
